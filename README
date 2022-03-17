@@ -1,0 +1,37 @@
+This is d3dcompiler-native, a version of Wine's new d3dcompiler repurposed for
+use in native GNU/Linux applications.
+
+Project Website: https://github.com/flibitijibibo/d3dcompiler-native
+
+License
+-------
+d3dcompiler-native is released under the GNU Lesser General Public License,
+version 2.1. See LICENSE for details.
+
+About d3dcompiler-native
+------------------------
+d3dcompiler-native was written to be used for FNA3D's dxvk-native support. The
+Wine team's d3dcompiler is actually a frontend for vkd3d-shader, so we simply
+reuse their frontend code and compile as a native binary, linking to vkd3d.
+
+Dependencies
+------------
+d3dcompiler-native requires dxvk-native's headers to build.
+malloc/free are used in our custom ID3DBlob implementation.
+memcpy/memcmp are used in Wine's D3DCompile implementation.
+
+Building d3dcompiler-native
+---------------------------
+Clone d3dcompiler-native and dxvk-native next to each other, then enter this
+directory and simply type `make`!
+
+Found an issue?
+---------------
+Issues and patches can be reported via GitHub:
+
+https://github.com/flibitijibibo/d3dcompiler-native/issues
+
+However, it is highly likely that issues will actually be in vkd3d-shader
+instead, so you may also want to file reports at WineHQ:
+
+https://bugs.winehq.org/
