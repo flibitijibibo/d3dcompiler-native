@@ -16,9 +16,9 @@ reuse their frontend code and compile as a native binary, linking to vkd3d.
 
 Dependencies
 ------------
-d3dcompiler-native requires dxvk-native's headers to build.
+d3dcompiler-native depends on vkd3d-shader and dxvk-native's headers.
 malloc/free are used in our custom ID3DBlob implementation.
-memcpy/memcmp are used in Wine's D3DCompile implementation.
+memcpy/memcmp/strlen are used in Wine's D3DCompile implementation.
 
 Building d3dcompiler-native
 ---------------------------
